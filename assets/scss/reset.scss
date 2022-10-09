@@ -8,11 +8,11 @@
 }
 @font-face {
     font-family: "SF_UI_DISPLAY_REGULAR";
-    src: url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
+    src: url("../fonts/SF_UI_DISPLAY/SF_UI_DISPLAY_REGULAR.ttf") format("truetype");
 }
 @font-face {
     font-family: "SF_UI_DISPLAY_SEMIBOLD";
-    src: url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
+    src: url("../fonts/SF_UI_DISPLAY/SF_UI_DISPLAY_REGULAR.ttf") format("truetype");
 }
 
 *,
@@ -360,34 +360,11 @@ body {
     height: 100%;
 }
 
-.conteiner {
+.container {
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-@mixin displayFlex(
-    $alignItems: center,
-    $justifyContent: space-between,
-    $flexDirection: row
-) {
-    display: flex;
-    flex-direction: $flexDirection;
-    align-items: $alignItems;
-    justify-content: $justifyContent;
-}
-
-@mixin font(
-    $fontSize: 16px,
-    $fontWeight: 400,
-    $fontFamily: "Inter-Regular",
-    $lineHeight: normal
-) {
-    font-family: $fontFamily;
-    font-size: $fontSize;
-    line-height: $lineHeight;
-    font-weight: $fontWeight;
 }
 
 :root {
@@ -402,6 +379,7 @@ body {
     --SizeText__60: 24px;
     --SizeText__TS7: 60px;
     --SizeText__60-Semibold: 60px;
+    --SizeText__HeaderText: 14px;
 
     /* line-height Styles */
     --LineHeight__36-Semibold: 79px;
@@ -414,6 +392,7 @@ body {
     --LineHeight__60: 26px;
     --LineHeight__TS7: 117px;
     --LineHeight__60-Semibold: 66px;
+    --LineHeight__HeaderText: 12px;
 
     /* Color Styles */
     --Color__BGHeader: #323232;

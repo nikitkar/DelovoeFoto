@@ -1,0 +1,36 @@
+@import "mixin.scss";
+
+.header{
+    background: var(--Color__BGHeader);
+    
+    &Wrapper{
+        width: 100%;
+    }
+
+    .nav{
+        $paddingItem: 13.5px 0;
+        $paddingLink: 13.5px 20.5px;
+        width: 100%;
+
+        &List{
+            @include displayFlex(center, center);
+        }
+
+        &Item{
+            color: var(--Color__TextHeader);
+            padding: $paddingItem;
+        }
+
+        &Link{
+            @include font(var(--SizeText__HeaderText), 400, "SF_UI_DISPLAY_REGULAR", var(--LineHeight__HeaderText));
+
+            letter-spacing: 1px;
+
+            padding: $paddingLink;
+
+            &:hover{
+                color: var(--Color__White);
+            }
+        }
+    }
+}
