@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 @font-face {
     font-family: "SF_PRO_DISPLAY_REGULAR";
     src: url("../fonts/SF_PRO_DISPLAY/SF_PRO_DISPLAY_REGULAR.otf") format("opentype");
@@ -367,39 +369,93 @@ body {
     padding: 0 15px;
 }
 
+.logo{
+    max-width: 161px;
+    width: 100%;
+    height: 57px;
+
+    background: url(../image/logo/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.linkToGo{
+    @include font(var(--SizeText__GoToLink), 400, "SF_UI_DISPLAY_REGULAR", var(--LineHeight__GoToLink));
+
+    color: var(--Color__GoToLink);
+    padding: 5px 17px;
+
+    &Block{
+        @include displayFlex(center, center);
+    }
+}
+
+.btn{
+    @include font(var(--SizeText__BtnText), 600, "SF_PRO_DISPLAY_REGULAR", var(--LineHeight__BtnText));
+
+    border-radius: 4px;
+    border: 1px solid black;
+
+    padding: 12px 69px;
+
+    background: var(--Color__Active);
+    text-align: center;
+
+    color: var(--Color__White);
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    &:hover{
+        background: var(--Color__ActiveHover);
+    }
+}
+
 :root {
     /* Text Styles */
-    --SizeText__36-Semibold: 36px;
     --SizeText__16-Semibold: 16px;
-    --SizeText__18-Regular: 18px;
     --SizeText__H1: 48px;
-    --SizeText__H2: 24px;
-    --SizeText__72: 72px;
     --SizeText__TS: 18px;
     --SizeText__60: 24px;
     --SizeText__TS7: 60px;
     --SizeText__60-Semibold: 60px;
+
     --SizeText__HeaderText: 14px;
+    --SizeText__TitleMainScreen: 72px;
+    --SizeText__TitleSubMainScreen: 28px;
+    --SizeText__GoToLink: 18px;
+    --SizeText__BtnText: 19px;
+    --SizeText__72: 72px;
+    --SizeText__H2: 24px;
+    --SizeText__36-Semibold: 36px;
+    --SizeText__18-Regular: 18px;
 
     /* line-height Styles */
-    --LineHeight__36-Semibold: 79px;
     --LineHeight__16-Semibold: 23px;
-    --LineHeight__18-Regular: 26px;
     --LineHeight__H1: 62px;
-    --LineHeight__H2: 31px;
     --LineHeight__TS: 16px;
-    --LineHeight__72: 81px;
     --LineHeight__60: 26px;
     --LineHeight__TS7: 117px;
     --LineHeight__60-Semibold: 66px;
+
     --LineHeight__HeaderText: 12px;
+    --LineHeight__TitleMainScreen: 94px;
+    --LineHeight__TitleSubMainScreen: 36px;
+    --LineHeight__GoToLink: 28px;
+    --LineHeight__BtnText: 16px;
+    --LineHeight__72: 81px;
+    --LineHeight__H2: 31px;
+    --LineHeight__36-Semibold: 79px;
+    --LineHeight__18-Regular: 26px;
 
     /* Color Styles */
     --Color__BGHeader: #323232;
     --Color__TextHeader: #EEEEEE;
     --Color__White: #fff;
-    --Color__ActiveLink: #688BB3;
-    --Color__LightBlakc: #202020;
+    --Color__GoToLink: #688BB3;
+    --Color__LightBlack: #202020;
     --Color__Active: #C1272D;
     --Color__ActiveHover: #FF0000;
     --Color__DarkWhite: #BCBCBC;
